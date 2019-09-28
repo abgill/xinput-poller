@@ -66,10 +66,10 @@ public:
 		ss << "LEFT TRIGGER " << left_trigger << std::endl;
 		ss << "RIGHT TRIGGER " << right_trigger << std::endl;
 
-		ss << "LEFT STICK X" << left_stick_x << std::endl;
+		ss << "LEFT STICK X " << left_stick_x << std::endl;
 		ss << "LEFT STICK Y " << left_stick_y << std::endl;
 
-		ss << "RIGHT STICK X" << right_stick_x << std::endl;
+		ss << "RIGHT STICK X " << right_stick_x << std::endl;
 		ss << "RIGHT STICK Y " << right_stick_y << std::endl;
 
 		ss << std::endl;
@@ -143,8 +143,8 @@ ControllerState getControllerState(int controller) {
 		controllerState.left_stick_x = (abs(normLX) < deadzoneX ? 0 : normLX);
 		controllerState.left_stick_y = (abs(normLY) < deadzoneY ? 0 : normLY);
 
-		float normRX = fmaxf(-1, (float)state.Gamepad.sThumbLX / 32767);
-		float normRY = fmaxf(-1, (float)state.Gamepad.sThumbLY / 32767);
+		float normRX = fmaxf(-1, (float)state.Gamepad.sThumbRX / 32767);
+		float normRY = fmaxf(-1, (float)state.Gamepad.sThumbRY / 32767);
 
 
 
